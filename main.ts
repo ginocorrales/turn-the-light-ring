@@ -1,0 +1,10 @@
+let LED = neopixel.create(DigitalPin.P2, 24, NeoPixelMode.RGB)
+LED.clear()
+LED.range(0, 9).showRainbow(0, 255)
+LED.setBrightness(100)
+basic.pause(50)
+basic.forever(function () {
+    LED.rotate(1)
+    LED.show()
+    basic.pause(50)
+})
