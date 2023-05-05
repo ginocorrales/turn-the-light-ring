@@ -2,6 +2,8 @@ let LED = neopixel.create(DigitalPin.P2, 24, NeoPixelMode.RGBW)
 LED.clear()
 LED.range(0, 9).showColor(neopixel.colors(NeoPixelColors.Indigo))
 LED.setBrightness(50)
+LED.showRainbow(1, 360)
+music.playMelody("D G F D C C B C ", 120)
 basic.pause(50)
 basic.forever(function () {
     LED.rotate(1)
